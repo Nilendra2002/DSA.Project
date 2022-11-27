@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int student=0;
+int admin=0;
+
+void studentArea(){
+    student++;
+}
+void adminArea(){
+    admin++;
+}
+
+int main() {
+    int stopper=0;
+    while(1){
+        printf("\n\t\t\t   1.Student area \n\t\t\t   2.Admin area \n\t\t\t     3.Exit \n\t\t\t Option:");
+		char input;
+        scanf(" %c",&input);
+
+        switch(input){
+            case '1':
+                studentArea();
+                break;
+            case '2':
+                adminArea();
+                break;
+            case '3':
+                    stopper=1;
+                    break;
+            default:
+                printf("\nInvalid option");
+                
+        }
+        if(stopper==1){
+            break;
+        }
+      
+    }
+       printf("\nResults are...\n");
+       printf("\nStudent Votes....%d",student);
+       printf("\nAdmin Votes......%d",admin);
+
+    return 0;
+}
